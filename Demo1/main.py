@@ -3,12 +3,13 @@
 @Author: Jkonel
 @Date: 2020-06-10 09:19:55
 @LastEditors: jkonel
-@LastEditTime: 2020-06-10 14:23:59
+@LastEditTime: 2020-06-10 15:13:04
 '''
 import math
 
 print('test Demo 1')
-#a = input('input name:')
+#a = input('input name:')   #input输入字符串
+#a = int(input('input name:'))
 a = 'hello'
 b = True
 c = 3.1415
@@ -25,3 +26,8 @@ a = 2 * 5
 b = 2 ** 5
 print(a, b)
 
+try:
+    a = int(input('age:'))
+except ValueError:
+    a = -1
+a >= 0 and a <= 100 and print(a)
