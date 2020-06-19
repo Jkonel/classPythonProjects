@@ -3,7 +3,7 @@
 @Author: Jkonel
 @Date: 2020-06-18 09:15:14
 @LastEditors: jkonel
-@LastEditTime: 2020-06-18 17:20:05
+@LastEditTime: 2020-06-19 18:37:28
 '''
 
 import requests
@@ -25,7 +25,11 @@ class my_reptile:
         strc_exact = '{0}-{1}-{2}-{3}_{4}_{5}_{6}'.format(res.year, res.month, res.day, res.hour, res.minute, res.second, res.microsecond)
         strc_day = '{0}-{1}-{2}'.format(res.year, res.month, res.day)
         strc_min = '{0}-{1}-{2}-{3}_{4}'.format(res.year, res.month, res.day, res.hour, res.minute)
-        return [strc_exact,strc_day,strc_min]
+        return [strc_exact, strc_day, strc_min]
+        
+    def get_nums(self, stri):
+        res = re.findall(r'\d[?:\d\.]\d+?', stri)
+        return float(res)#bug
 
     def page_download(self, url, name):
         # url:网址；name：保存名字
