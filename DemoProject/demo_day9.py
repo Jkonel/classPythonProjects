@@ -1,10 +1,11 @@
 '''
-@Description: day9 demo py file
+@Description: day9 demo py file for pandas dateFrame learning.
 @Author: Jkonel
 @Date: 2020-06-22 09:39:16
 @LastEditors: jkonel
-@LastEditTime: 2020-06-22 10:59:57
+@LastEditTime: 2020-06-22 11:11:55
 '''
+
 import pandas as pd
 import numpy as np
 
@@ -15,7 +16,7 @@ data = {'state': ['Ohio', 'Ohio', 'Ohio', 'Nevada', 'Nevada', 'Nevada'],
 frame01 = pd.DataFrame(data, columns=['year', 'state', 'pop'],
                       index=['one', 'two', 'three', 'four','five', 'six'])
 
-## Show date from data base:
+## -- Show date from data base:
 print(frame01)
 #rows:
 print(frame01[1:2]) #rows
@@ -31,7 +32,7 @@ print(frame01[['state','year']])    #some columns
 print(frame01.loc['one','state'])   #name finding
 print(frame01.iloc[1,2])    #index finding 
 
-## Aggregate function
+## -- Aggregate function
 pops = frame01['pop']
 print(type(pops))
 
@@ -42,7 +43,7 @@ print(frame01.info())   #show data frame information
 print(pops.shape)   #shape of a column
 print(pops.ndim)
 
-## delete data
+## -- delete data
 new_frame01 = frame01.drop(['state'],axis = 1)  #pop out columns that user pointed.
 new_frame02 = frame01.drop(['one'],axis=0)  #pop out rows that user pointed.
 new_frame022 = new_frame02.drop(['state'],axis=1,inplace=True)  #pop out data from the original date base.
@@ -53,7 +54,7 @@ print(new_frame02)
 print(new_frame03)
 print(frame01)  #the original data remains unchanged.
 
-## NAN processing
+## -- NAN processing
 frame01.dropna(axis = 0)    #delete nan in rows.
 frame01.dropna(axis = 1)    #delete nan in columns.
 frame01.dropna(subset=['state'],axis = 1)   #point the subset.
@@ -66,6 +67,10 @@ frame01.fillna(method = 'bfill')
 
 frame01['state'].fillna(frame01['state'].mean(),inplace = True) #using mean fufill nan
 
+## -- data filter
 
+new_frame05 = frame01[(frame01['year'] >= 2018)&(frame01['year']<=2020)]    #filter out all data that suitable for the requirements
 
+## -- string finding
+new_frame06 = frame01[frame01['state']].str.contains('test')    #filter out suitable data that constain the strings required.
 
