@@ -3,7 +3,7 @@
 @Author: Jkonel
 @Date: 2020-06-23 20:45:42
 @LastEditors: jkonel
-@LastEditTime: 2020-06-24 10:56:42
+@LastEditTime: 2020-06-24 16:50:39
 '''
 from pyecharts.charts import Map
 from typing import List
@@ -14,7 +14,7 @@ from pyecharts.charts import Timeline, Grid, Bar, Map, Pie, Line
 
 
 ##原始数据结构例子
-data = [
+data1 = [
     {
         'job':'java',
         'data': [
@@ -38,7 +38,78 @@ data = [
             ]
     },
 ]
-
+data = [
+    {
+        'job':'省总职位数',
+        'data': [
+            {'province': '上海市', 'value': 36987},
+             {'province': '云南省', 'value': 1220},
+             {'province': '内蒙古自治区', 'value': 140},
+             {'province': '北京市', 'value': 19852},
+             {'province': '吉林省', 'value': 486},
+             {'province': '四川省', 'value': 10155},
+             {'province': '天津市', 'value': 1486},
+             {'province': '宁夏回族自治区', 'value': 139},
+             {'province': '安徽省', 'value': 3609},
+             {'province': '山东省', 'value': 3938},
+             {'province': '山西省', 'value': 226},
+             {'province': '广东省', 'value': 62244},
+             {'province': '广西壮族自治区', 'value': 1043},
+             {'province': '新疆维吾尔自治区', 'value': 238},
+             {'province': '江苏省', 'value': 21811},
+             {'province': '江西省', 'value': 1286},
+             {'province': '河北省', 'value': 817},
+             {'province': '河南省', 'value': 1888},
+             {'province': '浙江省', 'value': 15811},
+             {'province': '海南省', 'value': 313},
+             {'province': '湖北省', 'value': 9495},
+             {'province': '湖南省', 'value': 4292},
+             {'province': '甘肃省', 'value': 221},
+             {'province': '福建省', 'value': 3272},
+             {'province': '西藏自治区', 'value': 33},
+             {'province': '贵州省', 'value': 359},
+             {'province': '辽宁省', 'value': 4003},
+             {'province': '重庆市', 'value': 2918},
+             {'province': '陕西省', 'value': 4999},
+             {'province': '青海省', 'value': 116},
+             {'province': '黑龙江省', 'value': 534}]
+    },
+    {
+        'job':'平均薪资',
+        'data': [
+            {'province': '上海市', 'value': 21733},
+             {'province': '云南省', 'value': 9581},
+             {'province': '内蒙古自治区', 'value': 8616},
+             {'province': '北京市', 'value': 19090},
+             {'province': '吉林省', 'value': 8385},
+             {'province': '四川省', 'value': 12605},
+             {'province': '天津市', 'value': 11359},
+             {'province': '宁夏回族自治区', 'value': 7993},
+             {'province': '安徽省', 'value': 11381},
+             {'province': '山东省', 'value': 10049},
+             {'province': '山西省', 'value': 8638},
+             {'province': '广东省', 'value': 15687},
+             {'province': '广西壮族自治区', 'value': 8558},
+             {'province': '新疆维吾尔自治区', 'value': 9180},
+             {'province': '江苏省', 'value': 13370},
+             {'province': '江西省', 'value': 10127},
+             {'province': '河北省', 'value': 8549},
+             {'province': '河南省', 'value': 10383},
+             {'province': '浙江省', 'value': 15048},
+             {'province': '海南省', 'value': 9327},
+             {'province': '湖北省', 'value': 11874},
+             {'province': '湖南省', 'value': 11501},
+             {'province': '甘肃省', 'value': 8451},
+             {'province': '福建省', 'value': 15142},
+             {'province': '西藏自治区', 'value': 8741},
+             {'province': '贵州省', 'value': 9156},
+             {'province': '辽宁省', 'value': 10280},
+             {'province': '重庆市', 'value': 10788},
+             {'province': '陕西省', 'value': 12151},
+             {'province': '青海省', 'value': 8492},
+             {'province': '黑龙江省', 'value': 7400}]
+    },
+]
 
 '''
 @description: 得到名字列表特定名字下标
