@@ -27,6 +27,8 @@ for i in range(1,rang):
     name = 'page_8_{0}.html'.format(i)
     my_rep.page_download(url, name)
     
+    
+    
 
 # 子页面读取
 indexs = 0
@@ -47,6 +49,7 @@ for i in range(1,rang):
         my_rep.page_download(inside,name2)
         indexs += 1
 
+        
 #---------------文件保存----------------#
 #my_rep.csv_save(dat,'save_test.csv')
 
